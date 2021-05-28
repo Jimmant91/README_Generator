@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // Promptuestions for user input
 const questions = [
@@ -53,15 +53,15 @@ const questions = [
     },
 ];
 
-// const promptUser = () => {
-//     return inquirer.prompt([]);
-// };
 
 // Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // Create a function to initialize app
-function init() {}
+function init() {
+    const promptUser = () => {
+    return inquirer.prompt([]);
+};}
 
 // Function call to initialize app
 init();
