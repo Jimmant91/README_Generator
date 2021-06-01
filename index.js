@@ -61,11 +61,14 @@ function writeToFile(fileName, data) {
     });
 }
 
-// Create a function to initialize app
+// Function to initialize app
 function init() {
-    const promptUser = () => {
-    return inquirer.prompt([]);
-};}
+    inquirer
+        .prompt(questions)
+        .then((response) => {
+            writeToFile(`${response.filename}.md`, generateMarkdown(response));
+        });
+}
 
 // Function call to initialize app
 init();
