@@ -22,7 +22,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'user instructions',
+        name: 'usage',
         message: 'What are the instructions for use of the project?',
     },
     {
@@ -38,7 +38,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'username',
+        name: 'github',
         message: 'What is your GitHub username?',
     },
     {
@@ -48,7 +48,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'file',
+        name: 'filename',
         message: 'Please provide a file name.',
     },
 ];

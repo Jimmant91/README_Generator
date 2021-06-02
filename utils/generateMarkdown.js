@@ -108,12 +108,41 @@ function renderLicenseLink(license) {
 
 // Function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  return `This projects is licensed under the ${license} license.`
+}
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  ${renderLicenseBadge(data.license)}
+  ## Description
+  ${data.description}
+  ## Table of Contents
+  * [Installation](##-installation)
+  * [Usage](##-usage)
+  * [License](##-license)
+  * [Contributors](##-contributors)
+  * [Tests](##-tests)
+  * [Questions](##-questions)
+  ## Installation
+  To install the necessary dependencies, run the following command:
+  \`\`\`
+  npm i
+  \`\`\`
+  ## Usage
+  ${data.usage}
+  ## License
+  ${renderLicenseSection(data.license)}
+  ## Contributors
+  ${data.contributors}
+  ## Tests
+  To run tests, run the following command:
+  \`\`\`
+  npm test
+  \`\`\`
+  ## Questions
+  If you have any questions about the repo, open an issue or contact me directly at [${data.email}](mailto:${data.email}). You can find more of my work at [${data.github}](https://www.github.com/${data.github}).
 `;
 }
 
